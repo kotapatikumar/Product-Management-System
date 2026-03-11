@@ -8,6 +8,18 @@ Simple responsive UI
 
 ---
 
+## Database Schema
+
+| Field      | Type     | Notes                    |
+| ---------- | -------- | ------------------------ |
+| _id        | ObjectId | MongoDB auto-generated   |
+| name       | String   | Name of the product      |
+| price      | Number   | Price of the product     |
+| category   | String   | Product category         |
+| created_at | Date     | Auto-generated timestamp |
+
+---
+
 ## Setup Instructions
 
 1. Clone the repo: `git clone <repo-url>`  
