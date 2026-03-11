@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Page</title>
+    <style>
+        body{
+            font-family: Arial;
+            background:#f4f6f8;
+            padding:40px;
+        }
+        .container{
+            width:700px;
+            margin:auto;
+            background:white;
+            padding:25px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,0.1);
+        }
+        h1{
+            margin:0;
+        }
+        .header{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+        button{
+            padding:8px 14px;
+            background:#007bff;
+            color:white;
+            border:none;
+            border-radius:4px;
+            cursor:pointer;
+        }
+        button:hover{
+            background:#0056b3;
+        }
+
+        input{
+            padding:8px;
+            margin:5px;
+        }
+        .product{
+            border:1px solid #ddd;
+            padding:10px;
+            margin-top:10px;
+            border-radius:6px;
+            background:#fafafa;
+        }
+        .search-form{
+            margin:15px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Products</h1>
+            <form method="get" action="/products/new" class="search">
+                <button>Add New Product</button>
+            </form>
+        </div>
+        <br><br>
+
+        <form method="get" action="/products" class="search-form">
+            <input type="text" name="search" placeholder="Search by name" >
+            <input type="text" name="category" placeholder="Filter by category" >
+            <button>Search</button>
+        </form>
+
+        <h2>Product Details</h2>
+        <% products.forEach((p)=>{ %>
+            <div class="product">
+                <h3><%= p.name %></h3>
+                <p>Price: ₹<%= p.price %></p>
+                <p>Category: <%= p.category %></p>
+                <p>Date: <%= new Date().toLocaleString() %></p>
+            </div>
+        <%})%>
+    </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Data</title>
+
+     <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            padding: 40px;
+        }
+        .container {
+            width: 500px;
+            margin: auto;
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        input {
+            width: 95%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            width: 100%;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #1e7e34;
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Add New Product</h1>
+    <form action="/products" method="post">
+        <input type="text" placeholder="Enter Product Name" name="product">
+        <br><br>
+        <input type="number" placeholder="Enter Product Price" name="price">
+        <br><br>
+        <input type="text" placeholder="Enter Product Category" name="category">
+        <br><br>
+        <button>ADD</button>
+    </form>
+  </div>
+</body>
+</html>
